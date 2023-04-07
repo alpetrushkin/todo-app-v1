@@ -1,10 +1,12 @@
 import React from 'react';
 
+
 const TodoForm = () => {
     return (
-        <div>
-
-        </div>
+        <form>
+            <input type="text" placeholder="Enter new todo"/>
+            <button type={"submit"}>Submit</button>
+        </form>
     );
 };
 
