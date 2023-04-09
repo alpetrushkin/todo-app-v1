@@ -1,0 +1,14 @@
+.todoBox {
+    max-width: 40%;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5px 16px;
+}
+
+.todoBox h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #182636;
+}

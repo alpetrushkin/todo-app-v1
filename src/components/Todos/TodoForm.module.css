@@ -1,0 +1,29 @@
+.todoFormBox {
+    margin-top: 25px;
+}
+
+.todoFormBox input, button {
+    height: 40px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.todoFormBox input {
+    margin-right: 20px;
+    width: 16%;
+    padding: 0 16px;
+    font-size: 16px;
+    color: #223d5b;
+}
+
+.todoFormBox button {
+    padding: 0 16px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #182636;
+    cursor: pointer;
+}
+.todoFormBox button:hover {
+    background-color: coral;
+    transition: background-color 0.3s ease-in-out;
+}
