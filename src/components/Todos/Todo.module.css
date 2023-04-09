@@ -1,4 +1,6 @@
 .todoBox {
+    display: flex;
+    align-items: end;
     max-width: 40%;
     margin: 10px auto;
     background-color: #fff;
@@ -7,8 +9,14 @@
     padding: 5px 16px;
 }
 
+.todoBox svg {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+}
+
 .todoBox h3 {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500;
     color: #182636;
 }

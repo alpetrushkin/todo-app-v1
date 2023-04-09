@@ -2,8 +2,9 @@ import React from 'react';
 import Todo from "./Todo";
 import s from './TodoList.module.css';
 
-const TodoList = ({todos}) => {
-    let todosMap = todos.map((todo, index) => <Todo key={index} todo={todo}/>)
+const TodoList = ({todos, removeTodo}) => {
+
+    let todosMap = todos.map((todo, index) => <Todo key={index} todo={todo} todoId={index} removeTodo={removeTodo}/>)
 
     return (
         <div className={s.todoListBox}>

@@ -10,11 +10,15 @@ function App() {
         setTodos([...todos, text])
     }
 
+    const removeTodoHandler = (todoId) => {
+       setTodos(todos.filter((_, index) => index !== todoId))
+    }
+
     return (
         <div className="App">
             <h1>Todo App</h1>
             <TodoForm addTodo={addTodoHandler}/>
-            <TodoList todos={todos}/>
+            <TodoList todos={todos} removeTodo={removeTodoHandler}/>
         </div>
     );
 }
