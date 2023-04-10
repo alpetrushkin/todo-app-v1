@@ -17,6 +17,10 @@ function App() {
       setTodos(todos.filter(el => el.id !== taskId))
    }
 
+   const checkedTaskHandler = (id) => {
+      setTodos(todos.map(todo => todo.id === id ? {...todo, isCompleted: !todo.isCompleted} : {...todo}))
+   }
+
    return (
       <div className="App">
          <h1>Todo App</h1>
@@ -24,6 +28,7 @@ function App() {
          <TodoList
             todos={todos}
             deleteTasks={deleteTasksHandler}
+            checkedTask={checkedTaskHandler}
          />
       </div>
    );
