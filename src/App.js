@@ -7,7 +7,6 @@ import TodosAction from "./components/Todos/TodosAction";
 
 function App() {
    const [todos, setTodos] = useState([])
-   console.log(todos)
 
    const addTodoHandler = (text) => {
       const newTodo = {title: text, isCompleted: false, id: v1()}
@@ -23,7 +22,7 @@ function App() {
    }
 
    const resetTodosHandler = () => {
-     setTodos([])
+      setTodos([])
    }
 
    const clearTodosHandler = () => {
@@ -34,10 +33,12 @@ function App() {
       <div className="App">
          <h1>Todo App</h1>
          <TodoForm addTodo={addTodoHandler}/>
-         <TodosAction
-            resetTodos={resetTodosHandler}
-            clearTodos={clearTodosHandler}
-         />
+         {!!todos.length
+            && (<TodosAction
+               resetTodos={resetTodosHandler}
+               clearTodos={clearTodosHandler}
+            />)
+         }
          <TodoList
             todos={todos}
             deleteTasks={deleteTasksHandler}
