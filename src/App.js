@@ -30,7 +30,6 @@ function App() {
    }
 
    const completedTodosCount = todos.filter((todo) => todo.isCompleted).length
-   console.log(completedTodosCount)
 
    return (
       <div className="App">

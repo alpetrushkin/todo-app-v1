@@ -9,7 +9,7 @@ const TodosAction = ({resetTodos, clearTodos, completedTodosExist}) => {
          <Button title="Reset Todos" onClick={resetTodos}>
             <RiRefreshLine/>
          </Button>
-         <Button title="Clear Completed Todos" onClick={clearTodos} disabled={completedTodosExist}>
+         <Button title="Clear Completed Todos" onClick={clearTodos} disabled={!completedTodosExist}>
             <RiDeleteBin2Line/>
          </Button>
       </div>
