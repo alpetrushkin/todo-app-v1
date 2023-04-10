@@ -1,0 +1,14 @@
+.button {
+    margin-top: 25px;
+    margin-right: 10px;
+    padding: 0 16px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #182636;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: coral;
+    transition: background-color 0.3s ease-in-out;
+}

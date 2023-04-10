@@ -3,6 +3,7 @@ import {v1} from "uuid";
 import TodoForm from "./components/Todos/TodoForm";
 import TodoList from "./components/Todos/TodoList";
 import './App.css';
+import TodosAction from "./components/Todos/TodosAction";
 
 function App() {
    const [todos, setTodos] = useState([])
@@ -25,6 +26,7 @@ function App() {
       <div className="App">
          <h1>Todo App</h1>
          <TodoForm addTodo={addTodoHandler}/>
+         <TodosAction/>
          <TodoList
             todos={todos}
             deleteTasks={deleteTasksHandler}
