@@ -22,11 +22,22 @@ function App() {
       setTodos(todos.map(todo => todo.id === id ? {...todo, isCompleted: !todo.isCompleted} : {...todo}))
    }
 
+   const resetTodosHandler = () => {
+     setTodos([])
+   }
+
+   const clearTodosHandler = () => {
+      setTodos(todos.filter(todo => !todo.isCompleted))
+   }
+
    return (
       <div className="App">
          <h1>Todo App</h1>
          <TodoForm addTodo={addTodoHandler}/>
-         <TodosAction/>
+         <TodosAction
+            resetTodos={resetTodosHandler}
+            clearTodos={clearTodosHandler}
+         />
          <TodoList
             todos={todos}
             deleteTasks={deleteTasksHandler}
